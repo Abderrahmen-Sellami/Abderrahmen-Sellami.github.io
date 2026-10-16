@@ -408,15 +408,10 @@ const CONFIG={
   github:"https://github.com/Abderrahmen-Sellami",
   linkedin:"https://www.linkedin.com/in/abderrahmen-sellami",
   gallery:[
-    {src:"https://opal.google/board/blobs/a87c1c3d-8f37-416e-a096-12f90da02931",alt:"Bureau minimaliste"},
-    {src:"https://opal.google/board/blobs/c96fd046-e37b-49c3-b17a-1236e7e70c5c",alt:"Bureau minimaliste"},
-    {src:"https://opal.google/board/blobs/f5291f4b-b869-43a5-a579-f53d93fe6e7d",alt:"Présentation en séminaire"},
-    {src:"https://opal.google/board/blobs/8f988598-2793-4e91-950e-64c50ba3a7fc",alt:"Présentation en séminaire"},
-    {src:"https://opal.google/board/blobs/040beec8-a221-4ef7-89a2-e902a72d6871",alt:"Soutenance"},
-    {src:"https://opal.google/board/blobs/e2b626d1-8a95-469c-b528-c8872953d115",alt:"Soutenance"},
-    {src:"https://opal.google/board/blobs/34cc2a98-27be-4807-bf87-fd26cf9a8e50",alt:"Enseignement"},
-    {src:"https://opal.google/board/blobs/bf5d1cdd-78e1-4c37-a2d8-1c178f970e8b",alt:"Enseignement"},
-    {src:"https://opal.google/board/blobs/41c49b11-36a6-4615-b8fb-7b8e4a258357",alt:"Étude en amphi"}
+    {src:"https://opal.google/board/blobs/c96fd046-e37b-49c3-b17a-1236e7e70c5c",alt:"Au bureau"},
+    {src:"https://opal.google/board/blobs/8f988598-2793-4e91-950e-64c50ba3a7fc",alt:"Présentation sur écran"},
+    {src:"https://opal.google/board/blobs/e2b626d1-8a95-469c-b528-c8872953d115",alt:"En réunion"},
+    {src:"https://opal.google/board/blobs/bf5d1cdd-78e1-4c37-a2d8-1c178f970e8b",alt:"Présentation au tableau"}
   ]  // vide = section masquée
 };
 
@@ -576,6 +571,7 @@ Promise.all(CONFIG.gallery.map(testImg)).then(list=>{
   IMGS=list.filter(Boolean);
   if(!IMGS.length)return;
   const n=IMGS.length;
+  if(n===4){grid.style.gridTemplateColumns="repeat(2,1fr)";grid.style.gridAutoRows="clamp(180px,30vw,340px)";}
   IMGS.forEach((it,i)=>{
     const b=document.createElement("button");b.setAttribute("aria-label",altOf(it,i));
     if(n>=6&&i===0)b.classList.add("tall");
