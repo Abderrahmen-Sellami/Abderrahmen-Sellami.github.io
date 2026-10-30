@@ -126,6 +126,9 @@ section{padding:96px 0;position:relative;z-index:1}
 .project .visual svg{width:88%;height:80%}
 .project h3{font-family:var(--display);font-size:1.15rem;margin-bottom:8px}
 .project p{color:var(--muted);font-size:.94rem;flex:1}
+.proj-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px;font-weight:600;font-size:.9rem}
+.proj-links a{color:#0ea5e9;text-decoration:none}
+.proj-links a:hover,.proj-links a:focus-visible{text-decoration:underline}
 .project .chips{margin-top:18px}
 
 /* Certifications */
@@ -326,6 +329,13 @@ footer{position:relative;z-index:1;padding:36px 0;border-top:1px solid var(--lin
         <p data-i18n="proj.p3d"></p>
         <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Canvas</span></div>
       </article>
+      <article class="project glass reveal" id="projDossierPret">
+        <div class="visual"><svg viewBox="0 0 200 110" fill="none"><rect x="26" y="14" width="74" height="84" rx="6" stroke="currentColor" opacity=".3"/><g fill="#0ea5e9" opacity=".55"><rect x="36" y="28" width="46" height="6" rx="3"/><rect x="36" y="44" width="54" height="6" rx="3"/><rect x="36" y="60" width="40" height="6" rx="3"/><rect x="36" y="76" width="50" height="6" rx="3"/></g><g transform="rotate(-10 146 56)"><rect x="112" y="34" width="68" height="44" rx="6" stroke="url(#g5)" stroke-width="3"/><path d="M130 57l9 9 18-18" stroke="url(#g5)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g><defs><linearGradient id="g5" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4f46e5"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient></defs></svg></div>
+        <h3 data-i18n="proj.p5">Dossier Prêt</h3>
+        <p data-i18n="proj.p5d"></p>
+        <div class="chips"><span class="chip">Workflow</span><span class="chip">JavaScript</span><span class="chip">Automatisation</span><span class="chip">e-Gov</span></div>
+        <div class="proj-links"><a href="dossier-pret/" target="_blank" rel="noopener" data-i18n="proj.demo">Voir la démo</a><a href="https://github.com/Abderrahmen-Sellami/dossier-pret" target="_blank" rel="noopener" data-i18n="proj.code">Voir sur GitHub</a></div>
+      </article>
       <!-- Projet SBF : masqué tant que l'accord n'est pas obtenu. Pour l'afficher, supprimez l'attribut « hidden ». -->
       <article class="project glass reveal" id="projSBF" hidden>
         <div class="visual"><svg viewBox="0 0 200 110" fill="none"><path d="M10 95h180" stroke="currentColor" opacity=".25"/><path d="M14 80l30-20 26 12 30-32 26 18 28-24 32 10" stroke="url(#g3)" stroke-width="3" stroke-linecap="round"/><defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#4f46e5"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient></defs></svg></div>
@@ -429,6 +439,7 @@ fr:{
  "proj.title":"Projets","proj.sub":"Projets académiques et personnels.",
  "proj.p1":"Plateforme d'enseignement et d'évaluation en ligne","proj.p1d":"Projet d'équipe à l'ESSECT (Génie logiciel et Conception orientée objet) : benchmarking, diagramme des cas d'utilisation, diagramme de classes et backlog Scrum, avec un rapport rédigé en LaTeX.",
  "proj.p2":"Activités React & Flutter","proj.p2d":"Dépôt GitHub regroupant mes activités d'Intégration Web (fondamentaux de React : JSX, composants) et de Développement mobile avec Flutter.",
+ "proj.p5":"Dossier Prêt","proj.p5d":"Workflow automatisé qui pré-contrôle un dossier administratif avant le guichet : pièces manquantes, dates de validité, cohérence du nom en arabe et en latin, puis rapport, notification et rappels.","proj.demo":"Voir la démo","proj.code":"Voir sur GitHub",
  "proj.p3":"Ce portfolio","proj.p3d":"Site personnel en HTML, CSS et JavaScript natifs, sans framework : trois langues dont l'arabe en RTL, thème clair/sombre et fond animé interactif.",
  "proj.p4":"Tableau de bord de gestion énergétique de flotte","proj.p4d":"Plateforme de suivi de la consommation d'une flotte de camions, développée pendant mon stage pour accompagner une certification ISO 50001.",
  "cert.title":"Parcours","cert.sub":"Formation, expérience et langues.",
@@ -455,6 +466,7 @@ en:{
  "proj.title":"Projects","proj.sub":"Academic and personal projects.",
  "proj.p1":"Online teaching and assessment platform","proj.p1d":"Team project at ESSECT (Software Engineering and Object-Oriented Design): benchmarking, use case diagram, class diagram and Scrum backlog, with a report written in LaTeX.",
  "proj.p2":"React & Flutter activities","proj.p2d":"GitHub repository with my Web Integration work (React fundamentals: JSX, components) and Mobile Development activities in Flutter.",
+ "proj.p5":"Dossier Prêt","proj.p5d":"Automated workflow that pre-checks an administrative file before the counter: missing documents, validity dates, name consistency across Arabic and Latin scripts, then a report, a notification and reminders.","proj.demo":"Live demo","proj.code":"View on GitHub",
  "proj.p3":"This portfolio","proj.p3d":"Personal site in plain HTML, CSS and JavaScript, no framework: three languages including right-to-left Arabic, light/dark theme and an interactive animated background.",
  "proj.p4":"Fleet energy management dashboard","proj.p4d":"Platform tracking the fuel consumption of a truck fleet, built during my internship to support an ISO 50001 certification.",
  "cert.title":"Background","cert.sub":"Education, experience and languages.",
@@ -481,6 +493,7 @@ ar:{
  "proj.title":"المشاريع","proj.sub":"مشاريع جامعية وشخصية.",
  "proj.p1":"منصة للتعليم والتقييم عن بُعد","proj.p1d":"مشروع جماعي بـ ESSECT (هندسة البرمجيات والتصميم الكائني): دراسة مقارنة، مخطط حالات الاستخدام، مخطط الأصناف وقائمة مهام Scrum، مع تقرير محرّر بـ LaTeX.",
  "proj.p2":"أنشطة React وFlutter","proj.p2d":"مستودع GitHub يجمع أنشطتي في مادة إدماج الويب (أساسيات React: JSX والمكوّنات) وفي تطوير الجوّال بـ Flutter.",
+ "proj.p5":"ملف جاهز","proj.p5d":"مسار عمل آلي يفحص الملف الإداري قبل الشباك: الوثائق الناقصة، صلاحية التواريخ، تطابق الاسم بالعربية واللاتينية، ثم تقرير وإشعار وتذكيرات.","proj.demo":"عرض تجريبي","proj.code":"على GitHub",
  "proj.p3":"هذا الموقع","proj.p3d":"موقع شخصي بـ HTML وCSS وJavaScript دون أي إطار عمل: ثلاث لغات منها العربية من اليمين إلى اليسار، وضع فاتح/داكن وخلفية متحركة تفاعلية.",
  "proj.p4":"لوحة قيادة لإدارة طاقة الأسطول","proj.p4d":"منصة لمتابعة استهلاك أسطول شاحنات، طوّرتها خلال تربصي لمرافقة الحصول على شهادة ISO 50001.",
  "cert.title":"المسار","cert.sub":"التكوين، الخبرة واللغات.",
